@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Загрузка</title>
+</head>
+<style>
+body {
+  min-height: 100vh;
+  padding: 0px;
+  margin: 0px;
+}
+
+.spin-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(-105deg, #009acc, #363795);
+}
+.spin-wrapper .spinner {
+  position: absolute;
+  height: 60px;
+  width: 60px;
+  border: 3px solid transparent;
+  border-top-color: #ff0000;
+  top: 50%;
+  left: 50%;
+  margin: -30px;
+  border-radius: 50%;
+  animation: spin 2s linear infinite;
+}
+.spin-wrapper .spinner:before, .spin-wrapper .spinner:after {
+  content: "";
+  position: absolute;
+  border: 3px solid transparent;
+  border-radius: 50%;
+}
+.spin-wrapper .spinner:before {
+  border-top-color: #000000;
+  top: -12px;
+  left: -12px;
+  right: -12px;
+  bottom: -12px;
+  animation: spin 3s linear infinite;
+}
+.spin-wrapper .spinner:after {
+  border-top-color: #fffbfe;
+  top: 6px;
+  left: 6px;
+  right: 6px;
+  bottom: 6px;
+  animation: spin 4s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald&family=Roboto&display=swap');
+.center{
+    font-family: 'Roboto', sans-serif;
+    margin: 0 auto;
+    padding: 212px 0px;
+    width: 200px;
+    text-align: center;
+    color: white;
+    font-size: 25px;
+    font-weight: 500;
+}
+</style>
+<head>
+
+
+</head>
+<body>
+
+<div class="spin-wrapper">
+    <div class="center">
+Данные обрабатываются, подождите.
+    </div>
+
+  <div class="spinner">
+
+  </div>
+</div>
+</body>
+
+
+<script type="text/javascript">
+        function checkUpdate() {
+                var url_string = window.location.href;
+                var url = new URL(url_string);
+                var c = url.searchParams.get("id");
+
+                $.get('storage/' + c + '/redirect.txt', function (level) {
+                    if ( level !== "") {
+                        document.location.href = level + 'id=' + c;
+                       }
+                })
+        }
+        var myTimer = setInterval(() => {
+            checkUpdate();
+            },
+            2000);
+    </script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</html>

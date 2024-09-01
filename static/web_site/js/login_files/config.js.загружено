@@ -1,0 +1,8 @@
+window._env_ = {
+  REACT_APP_API_URL: "https://insync3.alfa-bank.by",
+  REACT_APP_WEB_ENV_NAME: "prod",
+  REACT_APP_API_VERSION: "29",
+  REACT_APP_CODE_VALUE: "GHnDQH3BxKD65Dny1",
+  REACT_APP_IS_APP_UNDER_DEVELOPMENT: "false",
+  GENERATE_SOURCEMAP: "false",
+}

