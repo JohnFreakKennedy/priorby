@@ -1,0 +1,769 @@
+.clearfix {
+	clear: both;
+}
+
+.eupopup-container {
+	background: rgba(0, 0, 0, 0.8);
+	backdrop-filter: blur(6px);
+	color: #ffffff;
+	padding: 16px 20px 20px;
+	font-size: 14px;
+	font-family: 'Amalia';
+	line-height: 22px;
+	text-align: left;
+	display: none;
+	z-index: 12000000;
+	height: auto;
+	box-shadow: 0 2px 24px 0 rgba(0, 0, 0, 0.14);
+	max-width: 375px;
+	width: 100% !important;
+	min-width: 200px;
+	border-radius: 12px;
+}
+
+.eupopup-container-top,
+.eupopup-container-fixedtop {
+	position: absolute;
+	top: 0; left: 0; right: 0;
+}
+
+.eupopup-container-fixedtop {
+	position: fixed;
+}
+
+.eupopup-container-bottom {
+	position: fixed;
+	bottom: 0; left: 0; right: 0;
+}
+
+.eupopup-container-bottomleft {
+	position: fixed;
+	bottom: 10px;
+	left: 10px;
+	width: 300px;
+}
+
+.eupopup-container-bottomright {
+	position: fixed;
+	bottom: 10px;
+	left: 10px;
+	width: auto;
+	margin-bottom: 32px;
+	margin-left: 87px;
+}
+
+.eupopup-closebutton {
+
+}
+
+.eupopup-closebutton {
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	right: 20px;
+	top: 20px;
+	width: 10px;
+	height: 10px;
+	opacity: 1;
+}
+
+
+.eupopup-closebutton .close_cookie_ic {
+	width: 10px;
+	height: 10px;
+	color: #ffffff;
+	opacity: 0.65;
+}
+
+.eupopup-closebutton .close_cookie_ic path {
+	fill: #000000;
+	opacity: 0.6;
+}
+
+
+.eupopup-closebutton:hover {
+	opacity: 1;
+}
+.eupopup-closebutton:hover:before,
+.eupopup-closebutton:hover:after {
+
+}
+
+.eupopup-closebutton:before, .eupopup-closebutton:after {
+	position: absolute;
+	left: 15px;
+	content: ' ';
+	height: 8px;
+	width: 2px;
+	background-color: #333;
+}
+.eupopup-closebutton:before {
+	transform: rotate(45deg);
+}
+.eupopup-closebutton:after {
+	transform: rotate(-45deg);
+}
+
+.eupopup-closebutton:hover,
+.eupopup-closebutton:active {
+
+}
+
+.eupopup-head {
+	font-size: 1.2em;
+	font-weight: bold;
+	color: #fff;
+}
+
+.eupopup-body {
+	color: #ffffff;
+	padding-right: 20px;
+	font-size: 14px;
+}
+
+.eupopup-buttons {
+	padding: 0;
+	margin-top: 12px;
+}
+
+.eupopup-button_1 {
+	display: block;
+	font-family: 'Amalia';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 22px;
+	font-stretch: normal;
+	letter-spacing: normal;
+	color: #ffffff;
+	text-decoration: none;
+	text-align: center;
+	padding: 3px 5px 5px;
+	width: 100%;
+	background-color: transparent;
+	border: 1px solid rgba(255, 255, 255, 0.25);
+	border-radius: 8px;
+}
+
+.eupopup-button_1:hover,
+.eupopup-button_1:focus {
+	color: #ffffff;
+	border-color: #ffffff;
+}
+
+.eupopup-button_2 {
+	color: #ffffff;
+	font-weight: lighter;
+	font-size: 14px;
+	line-height: 22px;
+	font-family: 'Amalia';
+	text-decoration: none;
+	border-bottom: 1px solid currentColor;
+	border-color: #ffffff;
+}
+
+.eupopup-button_2:hover,
+.eupopup-button_2:focus {
+	border-style: hidden;
+	color: #ffffff;
+}
+
+.eupopup-button {
+
+}
+
+
+.eupopup-button:hover,
+.eupopup-button:focus {
+	text-decoration: none;
+}
+
+body .eupopup-color-inverse {
+	color: #000;
+	background-color: rgba(255, 255, 255, 0.9);
+}
+
+body .eupopup-color-inverse .eupopup-head {
+	color: #000;
+}
+
+body .eupopup-style-compact {
+	text-align: left;
+	padding: 8px 30px 7px 20px;
+	line-height: 15px;
+}
+
+body .eupopup-style-compact .eupopup-head,
+body .eupopup-style-compact .eupopup-body,
+body .eupopup-style-compact .eupopup-buttons {
+	display: inline;
+	padding: 0;
+	margin: 0;
+}
+
+body .eupopup-style-compact .eupopup-button {
+	margin: 0 5px;
+}
+
+/* ----------- iPhone 5, 5S, 5C and 5SE ----------- */
+
+/* Portrait */
+@media only screen
+and (min-device-width: 280px)
+and (max-device-width: 568px)
+and (-webkit-min-device-pixel-ratio: 2)
+and (orientation: portrait) {
+	.eupopup-container-bottomright {
+		position: fixed;
+		width: 100%;
+		right: 0;
+		/*top: 0;*/
+		left: 0;
+		bottom: 0;
+		margin-bottom: 0;
+		margin-left: 0;
+		text-align: left;
+		box-sizing: border-box;
+		font-size: 14px;
+
+		max-width: 100%;
+		border-radius: 12px 12px 0 0;
+	}
+
+	.eupopup-body br {
+		display: none;
+	}
+
+	[class="eupopup-buttons"] {
+		/*display: none;*/
+	}
+
+	.eupopup-container {
+		height: auto;
+	}
+
+	.eupopup-closebutton:before, .eupopup-closebutton:after {
+		position: absolute;
+		top: 11px;
+		left: 10px;
+		content: ' ';
+		height: 14px;
+		width: 2px;
+		background-color: #333;
+	}
+}
+
+/* Landscape */
+@media only screen
+and (min-device-width: 280px)
+and (max-device-width: 568px)
+and (-webkit-min-device-pixel-ratio: 2)
+and (orientation: landscape) {
+	.eupopup-container-bottomright {
+		position: fixed;
+		width: 100%;
+		right: 0;
+		/*top: 0;*/
+		left: 0;
+		bottom: 0;
+		margin-bottom: 0;
+		margin-left: 0;
+		text-align: left;
+		box-sizing: border-box;
+		font-size: 12px;
+
+		max-width: 100%;
+		border-radius: 12px 12px 0 0;
+	}
+
+	.eupopup-body br {
+		display: none;
+	}
+
+	[class="eupopup-buttons"] {
+		/*display: none;*/
+	}
+
+	.eupopup-container {
+		height: auto;
+	}
+
+	.eupopup-closebutton:before, .eupopup-closebutton:after {
+		position: absolute;
+		top: 11px;
+		left: 10px;
+		content: ' ';
+		height: 14px;
+		width: 2px;
+		background-color: #333;
+	}
+}
+
+/* ----------- iPhone 6, 6S, 7 and 8 ----------- */
+
+/* Portrait */
+@media only screen
+and (min-device-width: 375px)
+and (max-device-width: 667px)
+and (-webkit-min-device-pixel-ratio: 2)
+and (orientation: portrait) {
+	.eupopup-container-bottomright {
+		position: fixed;
+		width: 100%;
+		right: 0;
+		/*top: 0;*/
+		left: 0;
+		bottom: 0;
+		margin-bottom: 0;
+		margin-left: 0;
+		text-align: left;
+		box-sizing: border-box;
+		font-size: 12px;
+
+		max-width: 100%;
+		border-radius: 12px 12px 0 0;
+	}
+
+	.eupopup-body br {
+		display: none;
+	}
+
+	[class="eupopup-buttons"] {
+		/*display: none;*/
+	}
+
+	.eupopup-container {
+		height: auto;
+	}
+
+	.eupopup-closebutton:before, .eupopup-closebutton:after {
+		position: absolute;
+		top: 11px;
+		left: 10px;
+		content: ' ';
+		height: 14px;
+		width: 2px;
+		background-color: #333;
+	}
+}
+
+/* Landscape */
+@media only screen
+and (min-device-width: 375px)
+and (max-device-width: 667px)
+and (-webkit-min-device-pixel-ratio: 2)
+and (orientation: landscape) {
+	.eupopup-container-bottomright {
+		position: fixed;
+		width: 100%;
+		right: 0;
+		/*top: 0;*/
+		left: 0;
+		bottom: 0;
+		margin-bottom: 0;
+		margin-left: 0;
+		text-align: left;
+		box-sizing: border-box;
+		font-size: 12px;
+
+		max-width: 100%;
+		border-radius: 12px 12px 0 0;
+	}
+
+	.eupopup-body br {
+		display: none;
+	}
+
+	[class="eupopup-buttons"] {
+		/*display: none;*/
+	}
+
+	.eupopup-container {
+		height: auto;
+	}
+
+	.eupopup-closebutton:before, .eupopup-closebutton:after {
+		position: absolute;
+		top: 11px;
+		left: 10px;
+		content: ' ';
+		height: 14px;
+		width: 2px;
+		background-color: #333;
+	}
+}
+
+/*!* ----------- iPhone 6+, 7+ and 8+ ----------- *!*/
+
+/* Portrait */
+@media only screen
+and (min-device-width: 414px)
+and (max-device-width: 736px)
+and (-webkit-min-device-pixel-ratio: 3)
+and (orientation: portrait) {
+	.eupopup-container-bottomright {
+		position: fixed;
+		width: 100%;
+		right: 0;
+		/*top: 0;*/
+		left: 0;
+		bottom: 0;
+		margin-bottom: 0;
+		margin-left: 0;
+		text-align: left;
+		box-sizing: border-box;
+		font-size: 12px;
+
+		max-width: 100%;
+		border-radius: 12px 12px 0 0;
+	}
+
+	.eupopup-body br {
+		display: none;
+	}
+
+	[class="eupopup-buttons"] {
+		/*display: none;*/
+	}
+
+	.eupopup-container {
+		height: auto;
+	}
+
+	.eupopup-closebutton:before, .eupopup-closebutton:after {
+		position: absolute;
+		top: 11px;
+		left: 10px;
+		content: ' ';
+		height: 14px;
+		width: 2px;
+		background-color: #333;
+	}
+}
+
+/* Landscape */
+@media only screen
+and (min-device-width: 414px)
+and (max-device-width: 736px)
+and (-webkit-min-device-pixel-ratio: 3)
+and (orientation: landscape) {
+	.eupopup-container-bottomright {
+		position: fixed;
+		width: 100%;
+		right: 0;
+		/*top: 0;*/
+		left: 0;
+		bottom: 0;
+		margin-bottom: 0;
+		margin-left: 0;
+		text-align: left;
+		box-sizing: border-box;
+		font-size: 12px;
+
+		max-width: 100%;
+		border-radius: 12px 12px 0 0;
+	}
+
+	.eupopup-body br {
+		display: none;
+	}
+
+	[class="eupopup-buttons"] {
+		/*display: none;*/
+	}
+
+	.eupopup-container {
+		height: auto;
+	}
+
+	.eupopup-closebutton:before, .eupopup-closebutton:after {
+		position: absolute;
+		top: 11px;
+		left: 10px;
+		content: ' ';
+		height: 14px;
+		width: 2px;
+		background-color: #333;
+	}
+}
+
+/*!* ----------- iPhone X ----------- *!*/
+
+/* Portrait */
+@media only screen
+and (min-device-width: 375px)
+and (max-device-width: 812px)
+and (-webkit-min-device-pixel-ratio: 3)
+and (orientation: portrait) {
+	.eupopup-container-bottomright {
+		position: fixed;
+		width: 100%;
+		right: 0;
+		/*top: 0;*/
+		left: 0;
+		bottom: 0;
+		margin-bottom: 0;
+		margin-left: 0;
+		text-align: left;
+		box-sizing: border-box;
+		font-size: 12px;
+
+		max-width: 100%;
+		border-radius: 12px 12px 0 0;
+	}
+
+	.eupopup-body br {
+		display: none;
+	}
+
+	[class="eupopup-buttons"] {
+		/*display: none;*/
+	}
+
+	.eupopup-container {
+		height: auto;
+	}
+
+	.eupopup-closebutton:before, .eupopup-closebutton:after {
+		position: absolute;
+		top: 11px;
+		left: 10px;
+		content: ' ';
+		height: 14px;
+		width: 2px;
+		background-color: #333;
+	}
+}
+
+/* Landscape */
+@media only screen
+and (min-device-width: 375px)
+and (max-device-width: 812px)
+and (-webkit-min-device-pixel-ratio: 3)
+and (orientation: landscape) {
+	.eupopup-container-bottomright {
+		position: fixed;
+		width: 100%;
+		right: 0;
+		/*top: 0;*/
+		left: 0;
+		bottom: 0;
+		margin-bottom: 0;
+		margin-left: 0;
+		text-align: left;
+		box-sizing: border-box;
+		font-size: 12px;
+
+		max-width: 100%;
+		border-radius: 12px 12px 0 0;
+	}
+
+	.eupopup-body br {
+		display: none;
+	}
+
+	[class="eupopup-buttons"] {
+		/*display: none;*/
+	}
+
+	.eupopup-container {
+		height: auto;
+	}
+
+	.eupopup-closebutton:before, .eupopup-closebutton:after {
+		position: absolute;
+		top: 11px;
+		left: 10px;
+		content: ' ';
+		height: 14px;
+		width: 2px;
+		background-color: #333;
+	}
+}
+
+/*Galaxy*/
+
+@media only screen
+and (min-device-width: 360px)
+and (max-device-width: 640px)
+and (-webkit-device-pixel-ratio: 3)
+and (orientation: portrait) {
+	.eupopup-container-bottomright {
+		position: fixed;
+		width: 100%;
+		right: 0;
+		/*top: 0;*/
+		left: 0;
+		bottom: 0;
+		margin-bottom: 0;
+		margin-left: 0;
+		text-align: left;
+		box-sizing: border-box;
+		font-size: 12px;
+
+		max-width: 100%;
+		border-radius: 12px 12px 0 0;
+	}
+
+	.eupopup-body br {
+		display: none;
+	}
+
+	[class="eupopup-buttons"] {
+		/*display: none;*/
+	}
+
+	.eupopup-container {
+		height: auto;
+	}
+
+	.eupopup-closebutton:before, .eupopup-closebutton:after {
+		position: absolute;
+		top: 11px;
+		left: 10px;
+		content: ' ';
+		height: 14px;
+		width: 2px;
+		background-color: #333;
+	}
+}
+
+@media only screen
+and (min-device-width: 360px)
+and (max-device-width: 640px)
+and (-webkit-device-pixel-ratio: 3)
+and (orientation: landscape) {
+	.eupopup-container-bottomright {
+		position: fixed;
+		width: 100%;
+		right: 0;
+		/*top: 0;*/
+		left: 0;
+		bottom: 0;
+		margin-bottom: 0;
+		margin-left: 0;
+		text-align: left;
+		box-sizing: border-box;
+		font-size: 12px;
+
+		max-width: 100%;
+		border-radius: 12px 12px 0 0;
+	}
+
+	.eupopup-body br {
+		display: none;
+	}
+
+	[class="eupopup-buttons"] {
+		/*display: none;*/
+	}
+
+	.eupopup-container {
+		height: auto;
+	}
+
+	.eupopup-closebutton:before, .eupopup-closebutton:after {
+		position: absolute;
+		top: 11px;
+		left: 10px;
+		content: ' ';
+		height: 14px;
+		width: 2px;
+		background-color: #333;
+	}
+}
+
+@media only screen
+and (min-device-width: 360px)
+and (max-device-width: 740px)
+and (-webkit-device-pixel-ratio: 4)
+and (orientation: portrait) {
+	.eupopup-container-bottomright {
+		position: fixed;
+		width: 100%;
+		right: 0;
+		/*top: 0;*/
+		left: 0;
+		bottom: 0;
+		margin-bottom: 0;
+		margin-left: 0;
+		text-align: left;
+		box-sizing: border-box;
+		font-size: 12px;
+
+		max-width: 100%;
+		border-radius: 12px 12px 0 0;
+	}
+
+	.eupopup-body br {
+		display: none;
+	}
+
+	[class="eupopup-buttons"] {
+		/*display: none;*/
+	}
+
+	.eupopup-container {
+		height: auto;
+	}
+
+	.eupopup-closebutton:before, .eupopup-closebutton:after {
+		position: absolute;
+		top: 11px;
+		left: 10px;
+		content: ' ';
+		height: 14px;
+		width: 2px;
+		background-color: #333;
+	}
+}
+
+@media only screen
+and (min-device-width: 360px)
+and (max-device-width: 740px)
+and (-webkit-device-pixel-ratio: 4)
+and (orientation: landscape) {
+	.eupopup-container-bottomright {
+		position: fixed;
+		width: 100%;
+		right: 0;
+		/*top: 0;*/
+		left: 0;
+		bottom: 0;
+		margin-bottom: 0;
+		margin-left: 0;
+		text-align: left;
+		box-sizing: border-box;
+		font-size: 12px;
+
+		max-width: 100%;
+		border-radius: 12px 12px 0 0;
+	}
+
+	.eupopup-body br {
+		display: none;
+	}
+
+	[class="eupopup-buttons"] {
+		/*display: none;*/
+	}
+
+	.eupopup-container {
+		height: auto;
+	}
+
+	.eupopup-closebutton:before, .eupopup-closebutton:after {
+		position: absolute;
+		top: 11px;
+		left: 10px;
+		content: ' ';
+		height: 14px;
+		width: 2px;
+		background-color: #333;
+	}
+}
+
+.eupopup-closebutton:before, .eupopup-closebutton:after {
+	display: none;
+}

@@ -1,0 +1,197 @@
+/* The Modal (background) */
+.modal-win {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 10001; /* Sit on top */
+    padding-top: 50px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+/* Modal Content */
+.m-content {
+    display: flex;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px 20px 30px 20px;
+    border: 1px solid #888;
+    width: 100%;
+    max-width: 1260px;
+    /*height: 696px;*/
+    max-height: 100%;
+    flex-direction: column;
+    align-items: flex-end;
+}
+/*#MSI_modal .sm-helper__close {*/
+.modal-win .sm-helper__close {
+    width: 34px;
+    height: 34px;
+}
+/*#MSI_modal .sm-helper__close:before,*/
+/*#MSI_modal .sm-helper__close:after {*/
+.modal-win .sm-helper__close:before,
+.modal-win .sm-helper__close:after {
+    background-color: #929292;
+    width: 30px;
+    height: 2px;
+}
+.m-body {
+    width: 100%;
+    max-width: 1200px;
+    color: black;
+    font-family: Roboto-normal, Helvetica, Arial, sans-serif;
+}
+.m-title {
+    margin-bottom: 32.875px;
+}
+.modal-title__text {
+    font-size: 42px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 1.2;
+}
+.modal-title__descr {
+    font-size: 26px;
+    text-align: center;
+}
+.modal-page {
+    display: block;
+    flex-direction: row;
+    padding: 0 15px 0 15px;
+}
+.modal-page__img {
+    margin-right: 20px;
+    flex: 0 0 350px;
+}
+.modal-page__body {
+    width: 100%;
+    display: flex;
+}
+.mp-body__title {
+    font-size: 32px;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+.modal-page__body > div {
+    height: 595.13px;
+}
+.mp-body__wrapper {
+    overflow: auto;
+    width: inherit;
+}
+.mp-body__text {
+    font-size: 24px;
+}
+.mp-body__buttons {
+    display: flex;
+    padding-left: 380px;
+    margin-top: 30px;
+    font-size: 24px;
+}
+.mp-btn__prev {
+    padding-left: 20px;
+}
+.mp-btn__next {
+    padding-right: 20px;
+}
+.mp-btn__prev,
+.mp-btn__next {
+    cursor: pointer;
+    font-family: Futura-bold, Helvetica, Arial, sans-serif;
+    padding: 10px 20px;
+    background: #fff500;
+    font-size: 19px;
+    outline: none;
+    border: none;
+    margin-right: 18px;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.mp-btn__redirect {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    font-family: Futura-bold, Helvetica, Arial, sans-serif;
+    padding: 10px 20px;
+    background: #fff500;
+    font-size: 19px;
+    outline: none;
+    border: none;
+}
+.mp-btn__redirect:hover {
+    color: rgb(0,0,0);
+}
+@media (max-height: 800px), screen and (max-width: 1249px) {
+    .modal-title__text {
+        font-size: 24px;
+    }
+    .mp-body__title, .modal-title__descr  {
+        font-size: 22px;
+    }
+    .mp-body__text {
+        font-size: 18px;
+    }
+    .m-content {
+        max-height: none;
+    }
+    .modal-page__body > div {
+        height: 425px;
+    }
+    .modal-win {
+        padding-bottom: 50px;
+    }
+    .modal-page__img {
+        text-align: center;
+        text-align: -webkit-center;
+        text-align: -moz-center;
+    }
+    .mp-btn__next {
+        margin-right: 0;
+    }
+}
+@media screen and (max-width: 767px) {
+    .modal-win {
+        padding-top: 20px;
+    }
+    .modal-title__text {
+        font-size: 26px;
+    }
+    .m-content {
+        max-height: none;
+    }
+    .modal-title__descr,
+    .mp-body__text,
+    .mp-body__buttons {
+        font-size: 18px;
+        padding-left: 0;
+        justify-content: center;
+    }
+    .mp-body__title {
+        font-size: 22px;
+    }
+    .modal-page__body {
+        flex-direction: column;
+    }
+    .modal-page__body .mp-body__wrapper {
+        height: auto;
+    }
+    .modal-page__img {
+        max-width: 250px;
+        margin: 15px auto 0;
+        order: 2;
+        flex: 0 0 250px;
+    }
+    .modal-title__text {
+        margin-top: 20px;
+    }
+    /*#MSI_modal .sm-helper__close {*/
+    .modal-win .sm-helper__close {
+        margin: 10px -10px 0 0;
+    }
+}
